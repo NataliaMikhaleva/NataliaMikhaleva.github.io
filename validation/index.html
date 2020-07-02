@@ -23,15 +23,15 @@
                         <input class="form__input" type="text" minlength=2 maxlength=20 name="name" pattern="[А-ЯЁ][а-яё]+(-[А-ЯЁ][а-яё]*)?" placeholder="Имя" required />
                     </div>
                     <div class="form__field">
-                        <input class="form__input" type="text" name="email" pattern="\w+(-\w+)?@\w+(-\w+)?.\w+(.\w+)?" placeholder="E-Mail" required />
+                        <input class="form__input" type="text" name="email" pattern="[a-z](\w*[a-z]|\d?)*((-\w*[a-z])?)*@\w+(-\w+)?.\w+((.\w+)?)*" placeholder="E-Mail" required />
                         <span class="form__error">e-mail в формате: students-yandex@yandex.ru</span>
                     </div>
                     <div class="form__field">
-                        <input class="form__input" type="text" name="tel" placeholder="Телефон" pattern="(\+7|8)\s?\(?\d{3}\)?\s?-?\d{3}-?\d{2}-?\d{2}" minlength="" maxlength="18"  required/>
+                        <input class="form__input" type="text" name="tel" placeholder="Телефон" pattern="(\+7|8)((\(\d{3}\)\s?\d{3}-\d{2}-\d{2}?)|(\s?\d{3}((-\d{3}-\d{2}-\d{2})|(\d{7}))))" minlength="" maxlength="18"  required/>
                         <span class="form__error">Недопустимый формат номера</span>
                     </div>
                     <div class="form__field">
-                        <input class="form__input" type="text" name="url" pattern="(https?:\/\/)\w+(-\w+)?(-\w+)?(.\w+)*\D?" placeholder="Ваш сайт" required/>
+                        <input class="form__input" type="text" name="url" pattern="(https?:\/\/)(www\.)?((\d+.\d+.\d+.\d+)|(\w+(-\w+)*\.[a-z]+))(:\d{2,5})?\/?((\w+\/)*)?(\w+#)?" placeholder="Ваш сайт" required/>
                         <span class="form__error">URL в формате: http://mysite.ru</span>
                     </div>
                     <button class="form__button" type="text">Отправить</button>
